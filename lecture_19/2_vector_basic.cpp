@@ -1,5 +1,6 @@
 #include<iostream>
 #include<vector>
+#include<algorithm>
 using namespace std;
 
 int main()
@@ -17,6 +18,9 @@ int main()
     cout<<a.capacity()<<endl;
     //delete
     a.pop_back();
+     //inset begin
+    a.insert(a.begin()+2,6);
+    
     for(int i=0; i<a.size(); i++){
         cout<<a[i]<<" ";
     }
@@ -24,5 +28,19 @@ int main()
     cout<<a.front()<<endl;
     //last element
     cout<<a.back()<<endl;
+   // insert begin
+   a.insert(a.begin()+a.size()/2,6);
+   //reverse
+    reverse(a.begin(),a.end());
+    for(int i=0; i<a.size(); i++){
+        cout<<a[i]<<" ";
+    }
+      cout<<endl;
+    //sort
+    sort(a.begin(),a.end());
+    for(int i=0; i<a.size(); i++){
+        cout<<a[i]<<" ";
+    }
+    cout<<endl;
     return 0;
 }
